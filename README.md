@@ -180,6 +180,7 @@ SentinelX/
 # ⚙️ Installation & Running
 
 git clone https://github.com/SudoXploit7/SentinelX.git
+
 cd SentinelX
 
 python -m venv venv
@@ -210,3 +211,4 @@ scaler.pkl
 label_binarizer.pkl
 
 Restart the web app — done.
+
