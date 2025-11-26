@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <h5 class="mb-0">SentinelX – Upload Input CSV</h5>
+      </div>
+      <div class="card-body">
+        <p class="text-muted mb-3">
+          SentinelX loads your trained ML model and lets you test network events from any CSV file.
+        </p>
+
+        <ul class="list-unstyled small mb-3">
+          <li>• Model loaded:
+            {% if model_ok %}
+              <span class="badge bg-success">Yes</span>
+            {% else %}
+              <span class="badge bg-danger">No</span>
+            {% endif %}
+          </li>
+          <li>• Training feature mapping ready:
+            {% if training_features_ready %}
+              <span class="badge bg-success">Yes</span>
+            {% else %}
+              <span class="badge bg-warning text-dark">No (check training CSV path in app.py)</span>
+            {% endif %}
+          </li>
+          <li>• SHAP explainability:
+            {% if shap_available %}
+              <span class="badge bg-success">Enabled</span>
+            {% else %}
+              <span class="badge bg-secondary">Disabled (install shap)</span>
+            {% endif %}
+          </li>
+        </ul>
+
+        <form method="post" enctype="multipart/form-data" class="mt-3">
+          <div class="mb-3">
+            <label for="csv_file" class="form-label">Select Input CSV</label>
+            <input class="form-control" type="file" id="csv_file" name="csv_file" accept=".csv" required>
+            <div class="form-text">Columns should be similar to your original cybersecurity_attacks.csv.</div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-2">
+            Upload &amp; Browse Rows
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

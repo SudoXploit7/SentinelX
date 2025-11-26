@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">SentinelX – Browse Uploaded Events</h5>
+    <div class="d-flex gap-2">
+      <a href="{{ url_for('analyze') }}" class="btn btn-sm btn-outline-primary">
+        Run Analysis &amp; Dashboard
+      </a>
+      <a href="{{ url_for('index') }}" class="btn btn-sm btn-outline-light">
+        Upload Another CSV
+      </a>
+    </div>
+  </div>
+  <div class="card-body">
+    <p class="text-muted small">
+      Showing first 100 rows. Click “Predict” on any row to run the model.
+    </p>
+    <div class="table-responsive">
+      <table class="table table-sm align-middle">
+        <thead>
+          <tr>
+            <th>Predict</th>
+            {% for col in columns %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+            <tr>
+              <td>
+                <a href="{{ url_for('predict', row_idx=row['Row Index']) }}"
+                   class="btn btn-sm btn-outline-primary">
+                  Predict
+                </a>
+              </td>
+              {% for col in columns %}
+                <td>{{ row[col] }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
