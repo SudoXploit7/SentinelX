@@ -161,6 +161,7 @@ but I added small sample CSVs so anyone can test SentinelX instantly:
 # 🗂 Folder Structure
 
 SentinelX/
+
 ├── app.py # Flask web app
 
 ├── train.py # ML training script
@@ -225,5 +226,6 @@ scaler.pkl
 label_binarizer.pkl
 
 Restart the web app — done.
+
 
 
