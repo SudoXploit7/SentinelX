@@ -162,17 +162,31 @@ but I added small sample CSVs so anyone can test SentinelX instantly:
 
 SentinelX/
 ├── app.py # Flask web app
+
 ├── train.py # ML training script
+
 ├── scaler.pkl # StandardScaler
+
 ├── label_binarizer.pkl # MultiLabelBinarizer
-├── sample_input_v2.csv # Test samples
-├── sample_input_v3.csv
+
+├── sample.csv # Test samples
+
+├── sample2.csv
+
+├── sample3.csv
+
 ├── templates/
+
 │ ├── base.html # Main layout
+
 │ ├── index.html # Upload page
+
 │ ├── browse.html # Log viewer
+
 │ ├── predict.html # Prediction page
+
 │ └── dashboard.html # Analytics + PDF
+
 └── README.md
 
 ---
@@ -211,4 +225,5 @@ scaler.pkl
 label_binarizer.pkl
 
 Restart the web app — done.
+
 
