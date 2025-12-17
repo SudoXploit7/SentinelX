@@ -1,4 +1,4 @@
-# SentinelX – Multi-Label Cyber Attack Classifier ⚔️🛡️  
+# SentinelX – Multi-Label Cyber Attack Classifier 
 *My attempt at building a mini SIEM powered by Machine Learning.*
 
 Over the last few weeks, I wanted to challenge myself with a project that doesn’t just “run a model”—  
@@ -15,7 +15,7 @@ This project represents everything I enjoy working with:
 
 ---
 
-# 🌟 Why I Built SentinelX
+# Why I Built SentinelX
 
 I’ve always been fascinated by how SOC teams detect threats buried inside huge piles of logs.  
 And I wanted to build something that:
@@ -32,23 +32,23 @@ What started as “let me train a model” quickly became:
 
 ---
 
-# 🎨 SentinelX — UI Walkthrough (Screenshots)
+# SentinelX — UI Walkthrough (Screenshots)
 
-## 🟢 1. Home Page – Upload Any CSV  
+## 1. Home Page – Upload Any CSV  
 The landing page loads your ML model and gives you a clean interface to upload network logs.
 
 <img width="1919" height="1126" alt="Screenshot 2025-11-26 160333" src="https://github.com/user-attachments/assets/71a2f99e-3bba-4a71-8346-34bcc7728afc" />
 
 ---
 
-## 🟦 2. Browse Events – Scrollable Log Viewer  
+## 2. Browse Events – Scrollable Log Viewer  
 After uploading, SentinelX displays the first 100 rows so you can explore your dataset.
 
 <img width="1919" height="1127" alt="Screenshot 2025-11-26 160358" src="https://github.com/user-attachments/assets/ee2856fe-fb05-4ca4-9a74-0179ee232338" />
 
 ---
 
-## 🟣 3. Prediction View – Multi-Label Attack Classification  
+## 3. Prediction View – Multi-Label Attack Classification  
 This is where the ML model comes alive.  
 It predicts multiple attack types with probability bars.
 
@@ -56,44 +56,44 @@ It predicts multiple attack types with probability bars.
 
 ---
 
-## 🟠 4. Explainability – SHAP Feature Influence  
+## 4. Explainability – SHAP Feature Influence  
 No black-box magic here — SentinelX shows which features influenced the decision.
 
 <img width="1919" height="1128" alt="Screenshot 2025-11-26 160454" src="https://github.com/user-attachments/assets/4a2e492e-571d-47d8-8b6b-38011a4ebe43" />
 
 ---
 
-## 🟡 5. Threat Dashboard – Dataset-Level Analytics  
+## 5. Threat Dashboard – Dataset-Level Analytics  
 A mini SIEM dashboard summarizing attack frequencies and severity.
 
 <img width="1919" height="1127" alt="Screenshot 2025-11-26 160530" src="https://github.com/user-attachments/assets/a3a30a68-c780-4547-80d7-22cd7a91995e" />
 
 ---
 
-## 🔴 6. Exportable PDF Threat Report  
+## 6. Exportable PDF Threat Report  
 A polished, auto-generated report that summarizes the dataset’s threat profile.
 
 <img width="1915" height="1130" alt="Screenshot 2025-11-26 160552" src="https://github.com/user-attachments/assets/f193065a-add5-4d1e-bbfd-fec973c66aef" />
 
 ---
 
-# ⚡ What SentinelX Can Do
+# What SentinelX Can Do
 
-- 🔍 Predict multiple cyber attacks at once  
-- 📈 Show probability distribution for each attack label  
-- 🧠 Explain decisions using SHAP  
-- 🛡 Map attacks to **MITRE ATT&CK**  
-- 📊 Visualize dataset-level insights  
-- 📝 Generate a Threat Report PDF  
-- 🎛 Provide a polished UI like a real SOC dashboard  
+- Predict multiple cyber attacks at once  
+- Show probability distribution for each attack label  
+- Explain decisions using SHAP  
+- Map attacks to **MITRE ATT&CK**  
+- Visualize dataset-level insights  
+- Generate a Threat Report PDF  
+- Provide a polished UI like a real SOC dashboard  
 
 Everything happens inside a single, clean, interactive web app.
 
 ---
 
-# 🧠 Machine Learning — Behind the Scenes
+# Machine Learning — Behind the Scenes
 
-## 🔹 Algorithm Used: **Random Forest Classifier (One-vs-Rest Multi-Label)**
+## Algorithm Used: **Random Forest Classifier (One-vs-Rest Multi-Label)**
 
 I experimented with multiple algorithms — SVM, Logistic Regression, Naive Bayes, XGBoost —  
 but Random Forest stood out because:
@@ -115,7 +115,7 @@ This becomes a stable, production-ready model.
 
 ---
 
-# 🧪 Feature Engineering
+# Feature Engineering
 
 What I kept (features that matter):
 
@@ -142,11 +142,11 @@ that philosophy shaped the preprocessing.
 
 ---
 
-# 📦 Dataset
+# Dataset
 
 I trained SentinelX on the following public dataset:
 
-📌 **Kaggle – Cyber Security Attacks Dataset**  
+**Kaggle – Cyber Security Attacks Dataset**  
 🔗 https://www.kaggle.com/datasets/teamincribo/cyber-security-attacks
 
 The full dataset is **not included** (size + licensing),  
@@ -158,7 +158,7 @@ but I added small sample CSVs so anyone can test SentinelX instantly:
 
 ---
 
-# 🗂 Folder Structure
+# Folder Structure
 
 SentinelX/
 
@@ -192,7 +192,7 @@ SentinelX/
 
 ---
 
-# ⚙️ Installation & Running
+# Installation & Running
 
 git clone https://github.com/SudoXploit7/SentinelX.git
 
@@ -208,7 +208,7 @@ Then open:
 http://127.0.0.1:5000
 Upload your CSV → browse events → hit Predict → explore.
 
-🔁 Retraining SentinelX on a New Dataset
+Retraining SentinelX on a New Dataset
 If you want SentinelX to learn from a different dataset:
 
 Open train.py
@@ -226,6 +226,7 @@ scaler.pkl
 label_binarizer.pkl
 
 Restart the web app — done.
+
 
 
 
